@@ -5,7 +5,7 @@ Authorization is implemented to qualify user engagement and limit access to alte
 I built this application with Visual Studios 2019 IDE.
 It is a standard .Net MVC web application setup and scaffolding.
 
-The MVC portion for the UI was created from the models created.
+The MVC portion for the UI was created from the models.
 
 The database integration was implemented thru Entity Framework with migrations added for all tables.
 The database was adjusted in "Designer" view to modify primary key Identity specifications.
