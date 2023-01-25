@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DotNetCoreWeb_App.Data;
 using DotNetCoreWeb_App.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetCoreWeb_App.Controllers
 {
+    [Authorize]
     public class CriminalsDWsController : Controller
     {
         private readonly ApplicationDbContext _context;

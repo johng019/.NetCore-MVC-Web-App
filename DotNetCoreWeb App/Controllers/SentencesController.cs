@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DotNetCoreWeb_App.Data;
 using DotNetCoreWeb_App.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetCoreWeb_App.Controllers
 {
+    [Authorize]
     public class SentencesController : Controller
-    {
+    {      
         private readonly ApplicationDbContext _context;
 
         public SentencesController(ApplicationDbContext context)
