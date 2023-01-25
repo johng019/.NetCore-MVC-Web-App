@@ -1,0 +1,60 @@
+﻿@model DotNetCoreWeb_App.Models.Sentences
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Sentences</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.sentence_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.sentence_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.criminal_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.criminal_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.prob_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.prob_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.start_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.start_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.end_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.end_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.violations)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.violations)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.sentence_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

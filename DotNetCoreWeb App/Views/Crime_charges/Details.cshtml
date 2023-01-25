@@ -1,0 +1,66 @@
+﻿@model DotNetCoreWeb_App.Models.Crime_charges
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Crime_charges</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.charge_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.charge_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.crime_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.crime_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.crime_code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.crime_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.charge_status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.charge_status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.fine_amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.fine_amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.court_fee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.court_fee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.amount_paid)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.amount_paid)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pay_due_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pay_due_date)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.charge_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

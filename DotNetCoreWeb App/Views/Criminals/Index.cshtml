@@ -1,0 +1,89 @@
+﻿@model IEnumerable<DotNetCoreWeb_App.Models.Criminals>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Criminals</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.criminal_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.first)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.v_status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.p_status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.criminal_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.v_status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.p_status)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.criminal_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.criminal_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.criminal_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

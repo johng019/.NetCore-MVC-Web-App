@@ -1,0 +1,60 @@
+﻿@model DotNetCoreWeb_App.Models.Officers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Officers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.officer_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.officer_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.last)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.last)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.first)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.first)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.precinct)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.precinct)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.badge)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.badge)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.officer_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

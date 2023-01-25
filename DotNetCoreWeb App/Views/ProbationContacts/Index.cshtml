@@ -1,0 +1,53 @@
+﻿@model IEnumerable<DotNetCoreWeb_App.Models.ProbationContact>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Probation Contact</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.prob_cat)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.low_amt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.high_amt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.con_freq)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.prob_cat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.low_amt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.high_amt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.con_freq)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.prob_cat">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.prob_cat">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.prob_cat">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

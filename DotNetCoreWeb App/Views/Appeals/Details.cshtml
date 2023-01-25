@@ -1,0 +1,48 @@
+﻿@model DotNetCoreWeb_App.Models.Appeals
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Appeals</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.appeal_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.appeal_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.crime_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.crime_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.filing_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.filing_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hearing_date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hearing_date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.appeal_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

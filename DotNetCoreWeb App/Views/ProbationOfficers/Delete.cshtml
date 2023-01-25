@@ -1,0 +1,93 @@
+﻿@model DotNetCoreWeb_App.Models.ProbationOfficers
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ProbationOfficers</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.prob_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.prob_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.last)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.last)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.first)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.first)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.street)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.street)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.city)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.zip)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.zip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.mgr_id)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.mgr_id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.pager_num)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.pager_num)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="prob_id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

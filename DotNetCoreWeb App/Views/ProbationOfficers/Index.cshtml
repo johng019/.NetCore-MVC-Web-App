@@ -1,0 +1,102 @@
+﻿@model IEnumerable<DotNetCoreWeb_App.Models.ProbationOfficers>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Probation Officers</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.prob_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.first)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.street)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.city)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.state)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.zip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mgr_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pager_num)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.prob_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.first)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.street)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.city)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.state)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.zip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mgr_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pager_num)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.prob_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.prob_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.prob_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+﻿@model DotNetCoreWeb_App.Models.ProbationContact
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ProbationContact</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.prob_cat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.prob_cat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.low_amt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.low_amt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.high_amt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.high_amt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.con_freq)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.con_freq)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.prob_cat">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

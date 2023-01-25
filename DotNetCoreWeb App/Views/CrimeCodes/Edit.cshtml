@@ -1,0 +1,39 @@
+﻿@model DotNetCoreWeb_App.Models.CrimeCodes
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>CrimeCodes</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="crime_code" />
+            <div class="form-group">
+                <label asp-for="crime_code" class="control-label"></label>
+                <input asp-for="crime_code" class="form-control" />
+                <span asp-validation-for="crime_code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="code_description" class="control-label"></label>
+                <input asp-for="code_description" class="form-control" />
+                <span asp-validation-for="code_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
